@@ -1,0 +1,203 @@
+/* Muller-Trial-Black */
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('Muller-Trial-Black.woff2') format('woff2'),
+         url('Muller-Trial-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('Muller-Trial-BlackItalic.woff2') format('woff2'),
+         url('Muller-Trial-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* Muller-Trial-Bold */
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('Muller-Trial-Bold.woff2') format('woff2'),
+         url('Muller-Trial-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('Muller-Trial-BoldItalic.woff2') format('woff2'),
+         url('Muller-Trial-BoldItalic.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Muller-Trial-ExtraBold */
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('Muller-Trial-ExtraBold.woff2') format('woff2'),
+         url('Muller-Trial-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('Muller-Trial-ExtraBoldItalic.woff2') format('woff2'),
+         url('Muller-Trial-ExtraBoldItalic.woff') format('woff');
+    font-weight: 800;
+    font-style: italic;
+}
+
+/* Muller-Trial-Fat */
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('Muller-Trial-Fat.woff2') format('woff2'),
+         url('Muller-Trial-Fat.woff') format('woff');
+    font-weight: 950;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('Muller-Trial-FatItalic.woff2') format('woff2'),
+         url('Muller-Trial-FatItalic.woff') format('woff');
+    font-weight: 950;
+    font-style: italic;
+}
+
+/* Muller-Trial-Hairline */
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('Muller-Trial-Hairline.woff2') format('woff2'),
+         url('Muller-Trial-Hairline.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('Muller-Trial-HairlineItalic.woff2') format('woff2'),
+         url('Muller-Trial-HairlineItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+}
+
+/* Muller-Trial-Heavy */
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('Muller-Trial-Heavy.woff2') format('woff2'),
+         url('Muller-Trial-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('Muller-Trial-HeavyItalic.woff2') format('woff2'),
+         url('Muller-Trial-HeavyItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* Muller-Trial-Light */
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('Muller-Trial-Light.woff2') format('woff2'),
+         url('Muller-Trial-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('Muller-Trial-LightItalic.woff2') format('woff2'),
+         url('Muller-Trial-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Muller-Trial-Medium */
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('Muller-Trial-Medium.woff2') format('woff2'),
+         url('Muller-Trial-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('Muller-Trial-MediumItalic.woff2') format('woff2'),
+         url('Muller-Trial-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+/* Muller-Trial-Regular */
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('Muller-Trial-Regular.woff2') format('woff2'),
+         url('Muller-Trial-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('Muller-Trial-RegularItalic.woff2') format('woff2'),
+         url('Muller-Trial-RegularItalic.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Muller-Trial-Thin */
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('Muller-Trial-Thin.woff2') format('woff2'),
+         url('Muller-Trial-Thin.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('Muller-Trial-ThinItalic.woff2') format('woff2'),
+         url('Muller-Trial-ThinItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+}
+
+/* Muller-Trial-UltraBlack */
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('Muller-Trial-UltraBlack.woff2') format('woff2'),
+         url('Muller-Trial-UltraBlack.woff') format('woff');
+    font-weight: 950;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('Muller-Trial-UltraBlackItalic.woff2') format('woff2'),
+         url('Muller-Trial-UltraBlackItalic.woff') format('woff');
+    font-weight: 950;
+    font-style: italic;
+}
+
+/* Muller-Trial-UltraLight */
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('Muller-Trial-UltraLight.woff2') format('woff2'),
+         url('Muller-Trial-UltraLight.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller-Trial';
+    src: url('Muller-Trial-UltraLightItalic.woff2') format('woff2'),
+         url('Muller-Trial-UltraLightItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+}
