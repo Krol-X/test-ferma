@@ -1,6 +1,6 @@
 import style from './NewTask.module.css';
 
-import { Card } from '../../_shared/Card/Card';
+import Card from '@/components/_shared/Card';
 import AddIcon from '@/assets/add-icon.svg?react'
 
 import { useState } from 'react';

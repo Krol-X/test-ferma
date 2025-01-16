@@ -1,5 +1,5 @@
 import { createReducer, createAction } from '@reduxjs/toolkit';
-import { StringEnum } from '@/utils/string-enum'
+import { StringEnum } from '@/utils'
 
 export const FilterEnum = new StringEnum('filter_none', 'filter_done', 'filter_undone')
 

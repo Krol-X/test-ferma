@@ -14,11 +14,7 @@
   height: 1.25rem;
 }
 
-.title {
-
-}
-
-.title_done {
+.title.done {
   text-decoration: line-through;
 }
 
@@ -45,7 +41,7 @@
   border: none;
 }
 
-.edit_active {
+.active {
   color: rgb(0, 19, 255) !important;
   font-weight: 400;
 }

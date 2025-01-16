@@ -10,7 +10,7 @@ import { useDispatch } from 'react-redux';
 import { actions } from '@/stores'
 
 export const TaskItem = ({ data }) => {
-  const titleStyle = style.title + (data.done ? ` ${style.title_done}` : '')
+  const titleStyle = style.title + (data.done ? ` ${style.done}` : '')
 
   const [taskEdited, SetTaskEdited] = useState(false)
   const [taskTitle, SetTaskTitle] = useState('')
@@ -57,12 +57,10 @@ export const TaskItem = ({ data }) => {
         <div className={style.footer}>
           {taskEdited ? (
             <>
-              <button className={style.edit_active} onClick={saveItem}>
+              <button className={style.active} onClick={saveItem}>
                 Сохранить
               </button>
-              <button className={`${style.edit_button} ${style.edit_active}`}
-                onClick={undoEdit}
-              >
+              <button className={`${style.edit_button} ${style.active}`} onClick={undoEdit}>
                 <EditIcon />
               </button>
             </>

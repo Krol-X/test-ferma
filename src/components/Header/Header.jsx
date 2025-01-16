@@ -1,5 +1,5 @@
 import style from './Header.module.css';
-import { NewTask } from './NewTask/NewTask';
+import NewTask from './NewTask';
 
 export const Header = () => {
   return (

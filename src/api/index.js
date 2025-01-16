@@ -9,8 +9,7 @@ tasks.init([
   {
     date: 'Сегодня',
     title: 'Завершить написание SEO-текста с учетом всех требований.',
-    done: false,
-    _edited: true
+    done: false
   },
   {
     date: 'Сегодня',

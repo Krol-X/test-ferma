@@ -1,8 +1,7 @@
 import { createReducer, createAsyncThunk } from '@reduxjs/toolkit';
 import api from '@/api';
-import { findIndexById } from "@/utils/stores";
-import { StringEnum } from '@/utils/string-enum'
 import { FilterEnum } from '@/stores/filter'
+import { findIndexById, StringEnum } from "@/utils";
 
 const actions = {
   fetch: createAsyncThunk('tasks/fetch', async (filter = null) => {

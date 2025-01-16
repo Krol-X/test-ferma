@@ -1,3 +1,5 @@
+export const findIndexById = (array, id) => (array.findIndex(it => it.id === id))
+
 export class StringEnum {
   constructor(...values) {
     if (!values?.every((v) => typeof v === 'string')) {
