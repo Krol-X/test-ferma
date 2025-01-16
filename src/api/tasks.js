@@ -1,10 +1,10 @@
 const STORAGE = 'tasks-storage'
 let id = 0
 
-export const init = () => {
+export const init = (values) => {
   let items = localStorage.getItem(STORAGE)
   if (!(items instanceof Array)) {
-    items = []
+    items = values ?? []
   }
   items = items.map((task, idx) => ({ ...task, id: idx }))
   id = items.length + 1
