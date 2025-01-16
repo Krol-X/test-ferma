@@ -5,8 +5,17 @@ import CheckBox from './CheckBox';
 import EditIcon from '@/assets/edit-icon.svg?react'
 import TrashIcon from '@/assets/trash-icon.svg?react'
 
+import { useDispatch } from 'react-redux';
+import { actions } from '@/stores'
+
 export const TaskItem = ({ data }) => {
   const titleStyle = style.title + (data.done ? ` ${style.title_done}` : '')
+
+  const dispatch = useDispatch();
+
+  function removeItem() {
+    dispatch(actions.tasks.remove(data.id))
+  }
 
   return (
     <div className={style.task_item}>
@@ -32,9 +41,13 @@ export const TaskItem = ({ data }) => {
               </button>
             </>
           ) : (
-            <button className={style.edit_button}><EditIcon /></button>
+            <button className={style.edit_button}>
+              <EditIcon />
+            </button>
           )}
-          <button className={style.delete_button}><TrashIcon /></button>
+          <button className={style.delete_button} onClick={removeItem}>
+            <TrashIcon />
+          </button>
         </div>
       </Card>
     </div>

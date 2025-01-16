@@ -1,1 +1,1 @@
-export const findIndexById = (array, id) => array.findindex(it => it.id === id)
+export const findIndexById = (array, id) => (array.findIndex(it => it.id === id))

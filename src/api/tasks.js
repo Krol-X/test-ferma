@@ -2,8 +2,8 @@ const STORAGE = 'tasks-storage'
 let id = 0
 
 export const init = (values) => {
-  let items = fetch()
-  if (!(items instanceof Array)) {
+  let { items, error } = fetch()
+  if (error) {
     items = values ?? []
   }
   items = items.map((task, idx) => ({ ...task, id: idx }))
@@ -13,10 +13,13 @@ export const init = (values) => {
 
 export const fetch = () => {
   try {
-    const items = JSON.parse(localStorage.getItem(STORAGE)) || [];
+    const items = JSON.parse(localStorage.getItem(STORAGE));
+    if (!(items instanceof Array)) {
+      throw new Error(`Broken key ${STORAGE} format in localstorage`)
+    }
     return { items, error: null };
   } catch (err) {
-    return { items: [], error: err.message };
+    return { items: null, error: err.message };
   }
 };
 
