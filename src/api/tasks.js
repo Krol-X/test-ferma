@@ -47,15 +47,15 @@ export const update = (task) => {
     if (index !== -1) {
       tasks[index] = {
         id: task.id,
-        date: task?.date,
-        title: task?.title,
-        done: task?.done,
+        date: task?.date ?? tasks[index].date,
+        title: task?.title ?? tasks[index].title,
+        done: task?.done ?? tasks[index].done,
       };
       localStorage.setItem(STORAGE, JSON.stringify(tasks));
     } else {
       return { item: null, error: `Cannot find task with id #{task.id}` };
     }
-    return { item: task, error: null };
+    return { item: tasks[index], error: null };
   } catch (err) {
     return { item: null, error: err.message };
   }
