@@ -1,3 +1,67 @@
 .filter_button {
+  color: #fff;
+  background: none;
+  border: 2px solid rgb(48, 50, 75);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+}
+.filter_button:disabled {
+  color: rgb(222, 222, 222);
+  background: rgb(242, 243, 245);
+}
 
+.filter_none {
+  color: rgb(48, 50, 75);
+}
+.filter_none.active {
+  color: #fff;
+  background: rgb(48, 50, 75);
+  border-width: 1px;
+}
+.filter_none:hover {
+  color: #fff;
+  background: rgb(87, 90, 132);
+}
+.filter_none:focus {
+  color: #fff;
+  background: rgb(48, 50, 75);
+  border-color: rgb(164, 164, 164);
+}
+
+.filter_done {
+  color: rgb(106, 212, 0);
+  border-color: rgb(106, 212, 0);
+}
+.filter_done.active {
+  color: #fff;
+  background: rgb(106, 212, 0);
+  border: rgb(106, 212, 0);
+}
+.filter_done:hover {
+  color: rgb(106, 212, 0);
+  background: rgb(206, 255, 157);
+}
+.filter_done:focus {
+  color: #fff;
+  background: rgb(106, 212, 0);
+  border-color: rgb(206, 255, 157);
+}
+
+.filter_undone {
+  color: rgb(255, 47, 47);
+  border-color: rgb(255, 47, 47);
+}
+.filter_undone.active {
+  color: #fff;
+  background: rgb(255, 47, 47);
+  border: rgb(255, 47, 47);
+}
+.filter_undone:hover {
+  color: rgb(255, 47, 47);
+  background: rgb(255, 184, 184);
+}
+.filter_undone:focus {
+  color: #fff;
+  background: rgb(255, 47, 47);
+  border-color: rgb(255, 184, 184);
 }

@@ -2,10 +2,18 @@ import { createReducer, createAsyncThunk } from '@reduxjs/toolkit';
 import api from '@/api';
 import { findIndexById } from "@/utils/stores";
 import { StringEnum } from '@/utils/string-enum'
+import { FilterEnum } from '@/stores/filter'
 
 const actions = {
-  fetch: createAsyncThunk('tasks/fetch', async () => {
-    const { items, error } = await api.tasks.fetch();
+  fetch: createAsyncThunk('tasks/fetch', async (filter = null) => {
+    if (filter === FilterEnum.filter_done) {
+      filter = true
+    } else if (filter === FilterEnum.filter_undone) {
+      filter = false
+    } else {
+      filter = null
+    }
+    const { items, error } = await api.tasks.fetch(filter);
     if (error) throw new Error(error);
     return items;
   }),

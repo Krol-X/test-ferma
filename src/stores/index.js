@@ -2,13 +2,16 @@ import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import logger from 'redux-logger'
 
 import Tasks from './tasks';
+import Filter from './filter';
 
 export const actions = {
-  tasks: Tasks.actions
+  tasks: Tasks.actions,
+  filter: Filter.actions
 };
 
 const rootReducer = combineReducers({
-  tasks: Tasks.reducer
+  tasks: Tasks.reducer,
+  filter: Filter.reducer,
 })
 
 export const store = configureStore({

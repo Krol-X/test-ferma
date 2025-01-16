@@ -11,11 +11,14 @@ export const init = (values) => {
   localStorage.setItem(STORAGE, JSON.stringify(items))
 }
 
-export const fetch = () => {
+export const fetch = (filter = null) => {
   try {
-    const items = JSON.parse(localStorage.getItem(STORAGE));
+    let items = JSON.parse(localStorage.getItem(STORAGE));
     if (!(items instanceof Array)) {
       throw new Error(`Broken key ${STORAGE} format in localstorage`)
+    }
+    if (filter !== null) {
+      items = items.filter(it => it.done === filter)
     }
     return { items, error: null };
   } catch (err) {
