@@ -9,6 +9,6 @@
   display: flex;
 }
 
-.card-column {
+.column {
   flex-direction: column;
 }

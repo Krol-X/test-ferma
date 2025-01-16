@@ -1,2 +1,2 @@
-import { NewTask } from './NewTask';
-export default NewTask;
+import { Card } from './Card';
+export default Card;

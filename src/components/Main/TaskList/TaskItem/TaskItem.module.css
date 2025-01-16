@@ -1,3 +1,65 @@
-.taskitem {
+.task_item {
+  user-select: none;
+}
 
+.date {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.body {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.title {
+
+}
+
+.title_done {
+  text-decoration: line-through;
+}
+
+.footer {
+  margin-left: auto;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.edit_button, .delete_button {
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: 2px;
+  background: none;
+  border: none;
+}
+
+.edit_button {
+  color: #000;
+}
+.edit_button:active {
+  color: rgb(0, 19, 255);
+}
+.edit_button:hover {
+  color: rgb(96, 100, 146);
+}
+.edit_button:focus {
+  color: rgb(48, 50, 75);
+}
+.edit_button:disabled {
+  color: rgb(164, 164, 164);
+}
+
+.delete_button {
+  color: rgb(255, 47, 47);
+}
+.delete_button:hover {
+  color: rgb(255, 155, 155);
+}
+.delete_button:focus {
+  color: rgb(255, 47, 47);
+}
+.delete_button:disabled {
+  color: rgb(164, 164, 164);
 }

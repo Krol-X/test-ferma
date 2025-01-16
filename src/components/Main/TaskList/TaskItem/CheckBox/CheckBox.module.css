@@ -1,0 +1,13 @@
+.checked, .unchecked {
+  width: auto;
+  height: 1.25rem;
+  color: transparent;
+}
+
+.unchecked:hover {
+  color: rgb(217, 217, 217);
+}
+
+.checked {
+  color: rgb(106, 212, 0);
+}
