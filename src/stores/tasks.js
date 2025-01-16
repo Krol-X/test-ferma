@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import api from '../api';
-import { findIndexById } from "../utils/stores";
+import api from '@/api';
+import { findIndexById } from "@/utils/stores";
 
 const initialState = {
   items: [],
@@ -27,7 +27,7 @@ const updateTask = createAsyncThunk('tasks/update', async (task) => {
 });
 
 const deleteTask = createAsyncThunk('tasks/delete', async (id) => {
-  const { error } = await api.tasks.delete(id);
+  const { error } = await api.tasks.remove(id);
   if (error) throw new Error(error);
   return id;
 });
