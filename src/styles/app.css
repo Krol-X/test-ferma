@@ -1,7 +1,12 @@
-@import './fonts/muller-trial/muller-trial.css';
+@import './fonts/muller/stylesheet.css';
+
+* {
+  box-sizing: border-box;
+}
 
 body {
-  font-family: 'Muller-Trial', sans-serif;
+  color: rgb(48, 50, 75);
+  font-family: 'Muller', sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 16px;
@@ -9,7 +14,7 @@ body {
   margin: 0;
 }
 
-input {
+input, button {
   font-family: inherit;
   font-weight: inherit;
   font-style: inherit;

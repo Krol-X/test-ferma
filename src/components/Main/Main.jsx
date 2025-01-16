@@ -13,7 +13,8 @@ const tasks = [
     id: 2,
     date: 'Сегодня',
     title: 'Завершить написание SEO-текста с учетом всех требований.',
-    done: false
+    done: false,
+    _edited: true
   },
   {
     id: 3,
