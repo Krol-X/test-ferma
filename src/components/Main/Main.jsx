@@ -4,7 +4,7 @@ import { TaskList } from './TaskList/TaskList';
 import { useTasks } from '@/hooks/useTasks'
 
 export const Main = () => {
-  const {data: tasks} = useTasks();
+  const { tasks } = useTasks();
 
   return (
     <div className={style.main}>

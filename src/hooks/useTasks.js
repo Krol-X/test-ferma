@@ -8,9 +8,9 @@ export const useTasks = (
     const tasks = useSelector(state => state?.tasks.items);
 
     useEffect(() => {
-      dispatch(actions.tasks.fetchTasks());
+      dispatch(actions.tasks.fetch());
     }, []);
 
-    return tasks;
+    return { tasks };
   }
 );

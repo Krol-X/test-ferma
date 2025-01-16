@@ -1,18 +1,18 @@
-import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
-import tasks_reducer, { tasks_actions } from './tasks';
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+import logger from 'redux-logger'
 
-const middleware = getDefaultMiddleware({
-  immutableCheck: false,
-  serializableCheck: false,
-  thunk: true,
-});
-
-export const store = configureStore({
-  reducer: { tasks_reducer },
-  middleware,
-  devTools: process.env.NODE_ENV !== 'production',
-});
+import Tasks from './tasks';
 
 export const actions = {
-  tasks: tasks_actions
+  tasks: Tasks.actions
 };
+
+const rootReducer = combineReducers({
+  tasks: Tasks.reducer
+})
+
+export const store = configureStore({
+  reducer: rootReducer,
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
+  devTools: process.env.NODE_ENV !== 'production',
+});

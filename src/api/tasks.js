@@ -2,43 +2,64 @@ const STORAGE = 'tasks-storage'
 let id = 0
 
 export const init = (values) => {
-  let items = localStorage.getItem(STORAGE)
+  let items = fetch()
   if (!(items instanceof Array)) {
     items = values ?? []
   }
   items = items.map((task, idx) => ({ ...task, id: idx }))
   id = items.length + 1
-  localStorage.setItem(items)
+  localStorage.setItem(STORAGE, JSON.stringify(items))
 }
 
 export const fetch = () => {
-  return JSON.parse(localStorage.getItem(STORAGE));
-}
+  try {
+    const items = JSON.parse(localStorage.getItem(STORAGE)) || [];
+    return { items, error: null };
+  } catch (err) {
+    return { items: [], error: err.message };
+  }
+};
 
 export const create = (title) => {
-  const tasks = fetch();
-  const newTask = {
-    id: id++,
-    date: 'Сегодня',
-    title: title,
-    done: false
-  };
-  tasks.push(newTask);
-  localStorage.setItem(name, JSON.stringify(tasks));
-  return newTask;
-}
+  try {
+    const tasks = fetch().items;
+    const newTask = {
+      id: id++,
+      date: 'Сегодня',
+      title: title,
+      done: false,
+    };
+    tasks.push(newTask);
+    localStorage.setItem(STORAGE, JSON.stringify(tasks));
+    return { item: newTask, error: null };
+  } catch (err) {
+    return { item: null, error: err.message };
+  }
+};
 
 export const update = (task) => {
-  const tasks = fetch();
-  const index = tasks.findIndex(t => t.id === task.id);
-  if (index !== -1) {
-    tasks[index] = task;
-    localStorage.setItem(name, JSON.stringify(tasks));
+  try {
+    const tasks = fetch().items;
+    const index = tasks.findIndex((t) => t.id === task.id);
+    if (index !== -1) {
+      tasks[index] = task;
+      localStorage.setItem(STORAGE, JSON.stringify(tasks));
+    } else {
+      return { item: null, error: `Cannot find task with id #{task.id}` };
+    }
+    return { item: task, error: null };
+  } catch (err) {
+    return { item: null, error: err.message };
   }
-}
+};
 
 export const remove = (task_id) => {
-  let tasks = fetch();
-  tasks = tasks.filter(task => task.id !== task_id);
-  localStorage.setItem(name, JSON.stringify(tasks));
-}
+  try {
+    let tasks = fetch().items;
+    tasks = tasks.filter((task) => task.id !== task_id);
+    localStorage.setItem(STORAGE, JSON.stringify(tasks));
+    return { id: task_id, error: null };
+  } catch (err) {
+    return { id: null, error: err.message };
+  }
+};
