@@ -1,6 +1,6 @@
 .checked, .unchecked {
-  width: auto;
-  height: 100%;
+  width: 1.25rem;
+  height: 1.25rem;
   color: transparent;
 }
 

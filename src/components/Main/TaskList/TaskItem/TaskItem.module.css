@@ -11,7 +11,7 @@
   display: flex;
   gap: 2rem;
   align-items: center;
-  height: 1.25rem;
+  min-height: 1.25rem;
 }
 
 .title.done {
@@ -39,6 +39,12 @@
 .task_item button {
   background: none;
   border: none;
+  height: 100%;
+}
+
+.task_item button > svg {
+  width: auto;
+  height: 100%;
 }
 
 .active {
@@ -52,9 +58,6 @@
   padding: 2px;
 }
 
-.edit_button {
-  /* color: #000; */
-}
 .edit_button:hover {
   color: rgb(96, 100, 146);
 }
@@ -76,4 +79,13 @@
 }
 .delete_button:disabled {
   color: rgb(164, 164, 164);
+}
+
+@media (max-width: 425px) {
+  .header {
+    height: 1.25rem;
+  }
+  .footer {
+    height: 1.25rem;
+  }
 }
