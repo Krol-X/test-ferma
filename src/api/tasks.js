@@ -45,7 +45,12 @@ export const update = (task) => {
     const tasks = fetch().items;
     const index = tasks.findIndex((t) => t.id === task.id);
     if (index !== -1) {
-      tasks[index] = task;
+      tasks[index] = {
+        id: task.id,
+        date: task?.date,
+        title: task?.title,
+        done: task?.done,
+      };
       localStorage.setItem(STORAGE, JSON.stringify(tasks));
     } else {
       return { item: null, error: `Cannot find task with id #{task.id}` };

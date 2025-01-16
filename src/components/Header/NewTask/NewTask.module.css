@@ -7,6 +7,7 @@
   font-size: 1.5rem;
   padding: 0.25rem 0;
   border: none;
+  caret-color: rgb(0, 19, 255);
 }
 .edit:focus {
   outline: none;
