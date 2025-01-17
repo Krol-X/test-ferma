@@ -18,12 +18,14 @@ export const NewTask = () => {
 
   return (
     <Card>
-      <input className={style.edit} type='text' placeholder='Создать задачу'
-        value={taskTitle} onChange={e => SetTaskTitle(e.target.value)}
-      />
-      <button className={style.add_button} onClick={createTask}>
-        <AddIcon />
-      </button>
+      <div class={style.new_task}>
+        <input className={style.edit} type='text' placeholder='Создать задачу'
+          value={taskTitle} onChange={e => SetTaskTitle(e.target.value)}
+        />
+        <button className={style.add_button} onClick={createTask}>
+          <AddIcon className={style.add_icon} />
+        </button>
+      </div>
     </Card>
   );
 };

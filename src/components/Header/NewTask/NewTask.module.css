@@ -1,5 +1,9 @@
 .new_task {
+  width: 100%;
   display: flex;
+  gap: 1rem;
+  height: 5.625rem;
+  padding: 1.25rem;
 }
 
 .edit {
@@ -17,6 +21,8 @@
 }
 
 .add_button {
+  width: auto;
+  height: 100%;
   background: #fff;
   border: 1px solid rgb(48, 50, 75);
   border-radius: 10px;
@@ -24,13 +30,28 @@
   cursor: pointer;
 }
 
+.add_icon {
+  width: auto;
+  height: 100%;
+}
+
 @media (max-width: 768px) {
+  .new_task {
+    height: 4rem;
+    padding: 0.9rem;
+  }
+
   .edit {
     font-size: 1.25rem;
   }
 }
 
 @media (max-width: 425px) {
+  .new_task {
+    height: 3.25rem;
+    padding: 0.6rem;
+  }
+
   .edit {
     font-size: 1rem;
   }

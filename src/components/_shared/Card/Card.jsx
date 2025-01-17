@@ -1,13 +1,8 @@
 import style from './Card.module.css';
 
-export const Card = ({children, column, gap}) => {
-  const cardClass = style.card + (column? ` ${style.column}`: '')
-  const cardStyle = {
-    gap: gap || '1rem'
-  };
-
+export const Card = ({children}) => {
   return (
-    <div className={cardClass} style={cardStyle}>
+    <div className={style.card}>
       {children}
     </div>
   );

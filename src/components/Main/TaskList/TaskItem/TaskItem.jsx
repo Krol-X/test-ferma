@@ -39,8 +39,8 @@ export const TaskItem = ({ data }) => {
   }
 
   return (
-    <div className={style.task_item}>
-      <Card column={true} gap='1.25rem'>
+    <Card column={true} gap='1.25rem'>
+      <div className={style.task_item}>
         <div className={style.header}>
           <div className={style.date}>{data.date}</div>
         </div>
@@ -73,7 +73,7 @@ export const TaskItem = ({ data }) => {
             <TrashIcon />
           </button>
         </div>
-      </Card>
-    </div>
+      </div>
+    </Card>
   );
 };
