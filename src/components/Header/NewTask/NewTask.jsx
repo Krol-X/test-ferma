@@ -1,6 +1,5 @@
 import style from './NewTask.module.css';
 
-import Card from '@/components/_shared/Card';
 import AddIcon from '@/assets/add-icon.svg?react'
 
 import { useState } from 'react';
@@ -17,15 +16,13 @@ export const NewTask = () => {
   }
 
   return (
-    <Card>
-      <div class={style.new_task}>
-        <input className={style.edit} type='text' placeholder='Создать задачу'
-          value={taskTitle} onChange={e => SetTaskTitle(e.target.value)}
-        />
-        <button className={style.add_button} onClick={createTask}>
-          <AddIcon className={style.add_icon} />
-        </button>
-      </div>
-    </Card>
+    <div class={style.new_task}>
+      <input className={style.edit} type='text' placeholder='Создать задачу'
+        value={taskTitle} onChange={e => SetTaskTitle(e.target.value)}
+      />
+      <button className={style.add_button} onClick={createTask}>
+        <AddIcon className={style.add_icon} />
+      </button>
+    </div>
   );
 };

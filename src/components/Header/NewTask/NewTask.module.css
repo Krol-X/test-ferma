@@ -1,9 +1,13 @@
 .new_task {
   width: 100%;
   display: flex;
-  gap: 1rem;
+  gap: 1.25rem;
   height: 5.625rem;
   padding: 1.25rem;
+
+  border-radius: 21px;
+  box-shadow: 0px 4px 17.8px 0px rgba(0, 0, 0, 0.1);
+  background: rgb(255, 255, 255);
 }
 
 .edit {
@@ -39,6 +43,7 @@
   .new_task {
     height: 4rem;
     padding: 0.9rem;
+    border-radius: 10px;
   }
 
   .edit {

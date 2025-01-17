@@ -5,6 +5,10 @@
   gap: 1rem;
   padding: 1.25rem;
   user-select: none;
+
+  border-radius: 21px;
+  box-shadow: 0px 4px 17.8px 0px rgba(0, 0, 0, 0.1);
+  background: rgb(255, 255, 255);
 }
 
 .date {

@@ -1,6 +1,5 @@
 import style from './TaskItem.module.css';
 
-import Card from '@/components/_shared/Card';
 import CheckBox from './CheckBox';
 import EditIcon from '@/assets/edit-icon.svg?react'
 import TrashIcon from '@/assets/trash-icon.svg?react'
@@ -39,41 +38,39 @@ export const TaskItem = ({ data }) => {
   }
 
   return (
-    <Card column={true} gap='1.25rem'>
-      <div className={style.task_item}>
-        <div className={style.header}>
-          <div className={style.date}>{data.date}</div>
-        </div>
-        <div className={style.body}>
-          <CheckBox checked={data.done} onClick={doneItem} />
-          {taskEdited ? (
-            <input className={style.title_edit} type='text'
-              value={taskTitle} onChange={e => SetTaskTitle(e.target.value)}
-            />
-          ) : (
-            <div className={titleStyle}>{data.title}</div>
-          )}
-        </div>
-        <div className={style.footer}>
-          {taskEdited ? (
-            <>
-              <button className={style.active} onClick={saveItem}>
-                Сохранить
-              </button>
-              <button className={`${style.edit_button} ${style.active}`} onClick={undoEdit}>
-                <EditIcon />
-              </button>
-            </>
-          ) : (
-            <button className={style.edit_button} onClick={editItem}>
+    <div className={style.task_item}>
+      <div className={style.header}>
+        <div className={style.date}>{data.date}</div>
+      </div>
+      <div className={style.body}>
+        <CheckBox checked={data.done} onClick={doneItem} />
+        {taskEdited ? (
+          <input className={style.title_edit} type='text'
+            value={taskTitle} onChange={e => SetTaskTitle(e.target.value)}
+          />
+        ) : (
+          <div className={titleStyle}>{data.title}</div>
+        )}
+      </div>
+      <div className={style.footer}>
+        {taskEdited ? (
+          <>
+            <button className={style.active} onClick={saveItem}>
+              Сохранить
+            </button>
+            <button className={`${style.edit_button} ${style.active}`} onClick={undoEdit}>
               <EditIcon />
             </button>
-          )}
-          <button className={style.delete_button} onClick={removeItem}>
-            <TrashIcon />
+          </>
+        ) : (
+          <button className={style.edit_button} onClick={editItem}>
+            <EditIcon />
           </button>
-        </div>
+        )}
+        <button className={style.delete_button} onClick={removeItem}>
+          <TrashIcon />
+        </button>
       </div>
-    </Card>
+    </div>
   );
 };
